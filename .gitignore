@@ -1,0 +1,5 @@
+# 屏蔽文件夹
+venv/
+__pycache__/
+resume/*
+log/*
