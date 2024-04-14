@@ -1,6 +1,6 @@
 # Boss简历-招聘岗位匹配投递助手
 
-本项目旨在利用ChatGPT模型，结合Selenium、OpenAI API和pypdf技术，自动化个人简历与Boss直聘等招聘网站上的招聘岗位 JD（Job Description）的匹配过程。
+本项目旨在利用ChatGPT模型，结合Selenium、OpenAI API和pypdf技术，自动化个人简历与Boss直聘等招聘网站上的招聘岗位 JD（Job Description）的匹配过程，并完成自动打招呼语。
 
 ***免责声明：本文章涉及到的应用仅供学习交流使用，不得用于任何商业用途，数据来源于互联网公开内容，没有获取任何私有和有权限的信息（个人信息等）。由此引发的任何法律纠纷与本人无关！禁止将本文技术或者本文所关联的Github项目源码用于任何目的。***
 
@@ -64,7 +64,7 @@ OPENAI_BASE_URL：默认为OPENAI官方地址，如使用第三方APIKEY需配�
 
 如果你觉得这个项目对你有帮助，可以请我喝杯咖啡 ^_^
 
-<img src="https://mybucket-1308772293.cos.ap-guangzhou.myqcloud.com/picture/202404141649095.jpg" alt="请我喝杯咖啡" style="zoom:50%;" />
+<img src="https://mybucket-1308772293.cos.ap-guangzhou.myqcloud.com/picture/202404141649095.jpg" alt="请我喝杯咖啡" style="zoom:20%;" />
 
 
 
