@@ -2,8 +2,8 @@
 # Description: Boss直聘简历JD匹配投递助手，使用Selenium + Openai API + Pypdf
 # Author：Meteor
 
-import random
 import os
+import random
 import time
 
 # Selenium导入
@@ -229,26 +229,21 @@ def greet_interviewer(driver, wait, resume_text, log_file):
 
 if __name__ == "__main__":
     # 每次程序执行前，关闭已存在的chrome进程，避免影响
-    os.system('taskkill /im chrome.exe /F')
+    os.system("taskkill /im chrome.exe /F")
     # 调用检查简历文件，返回简历名
     resume_name = check_resume_file()
     # 读取简历内容，转换为文本
     resume_text = pdf_to_text(f"./resume/{resume_name}")
     # 生成日志
     log_file = create_log(resume_text)
-    try:
-        # 初始化浏览器
-        driver = init_browser()
-        # 设置常规等待延时
-        wait = WebDriverWait(driver, 10)
-        # 登录Boss直聘
-        login_boss(driver, wait)
-        # 搜索岗位
-        search_job(driver, wait)
-        # 与面试官打招呼
-        greet_interviewer(driver, wait, resume_text, log_file)
-    except Exception as e:
-        print("发生异常:", e)
-    finally:
-        # 无论是否发生异常，都会执行这里的代码
-        driver.quit()
+    # 初始化浏览器
+    driver = init_browser()
+    # 设置常规等待延时
+    wait = WebDriverWait(driver, 10)
+    # 登录Boss直聘
+    login_boss(driver, wait)
+    # 搜索岗位
+    search_job(driver, wait)
+    # 与面试官打招呼
+    greet_interviewer(driver, wait, resume_text, log_file)
+    driver.quit()

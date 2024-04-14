@@ -1,4 +1,4 @@
-# Boss简历-招聘岗位匹配投递助手
+# Boss简历招聘岗位匹配投递助手
 
 本项目旨在利用ChatGPT模型，结合Selenium、OpenAI API和pypdf技术，自动化个人简历与Boss直聘等招聘网站上的招聘岗位 JD（Job Description）的匹配过程，并完成自动打招呼语。
 
@@ -35,18 +35,20 @@
    pip install python-dotenv
    ```
 3. ### 配置OPENAI API
-找到目录下的.env配置文件：
-OPENAI_API_KEY：填入官方或第三方APIKEY
-OPENAI_BASE_URL：默认为OPENAI官方地址，如使用第三方APIKEY需配置第三方代理地址
+  找到目录下的.env配置文件：
+  OPENAI_API_KEY：填入官方或第三方APIKEY
+  OPENAI_BASE_URL：默认为OPENAI官方地址，如使用第三方APIKEY需配置第三方代理地址
 
 4. ### 将简历放入目录
-将简历放入resume目录下，注意目前只支持pdf格式
+  将简历放入resume目录下，注意目前只支持pdf格式
 
 5. ### 运行
 
     ```
     python run main.py
     ```
+  
+  PS：到搜索页面后，需要自行筛选搜索条件后回到终端按回车继续进行
 
 ## 功能
 - 支持BOSS直聘-搜索页-岗位投递
@@ -55,10 +57,14 @@ OPENAI_BASE_URL：默认为OPENAI官方地址，如使用第三方APIKEY需配�
 - 默认使用gpt-3.5-turbo模型，可自行在functions.py中替换
 - 打印简历解析及招呼语日志，方便分析调整prompt效果
 
+## Bug
+- 浏览器会频繁渲染，暂没找到好的办法
+
 ## TODO
 - 增加沟通次数上限自动结束代码
 - 兼容更多简历格式
 - 增加支持推荐页岗位投递
+- 加入错误处理
 
 ## 请作者喝杯咖啡
 
